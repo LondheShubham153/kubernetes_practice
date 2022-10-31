@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react-todo-deployment
+  labels:
+    app: react-todo
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: react-todo
+  template:
+    metadata:
+      labels:
+        app: react-todo
+    spec:
+      containers:
+      - name: react-todo
+        image: trainwithshubham/react-django-app:latest
+        ports:
+        - containerPort: 8001

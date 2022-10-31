@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: devops-demo
+data:
+  levels: "100"
+  level_properties_file_name: "lol.properties"
+
+  level.properties: |
+    level.types=easy,medium,hard
+    level.maximum-level=13
+    
+
+

@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: react-django-pod
+spec:
+  containers:
+    - name: react-django
+      image: trainwithshubham/react-django-app:latest
+      ports:
+      - containerPort: 8001
